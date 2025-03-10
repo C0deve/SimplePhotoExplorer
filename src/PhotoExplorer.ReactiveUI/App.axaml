@@ -1,0 +1,26 @@
+<Application
+    RequestedThemeVariant="Dark"
+    x:Class="PhotoExplorer.ReactiveUI.App"
+    x:CompileBindings="True"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:local="using:PhotoExplorer.ReactiveUI"
+    xmlns:vm="clr-namespace:PhotoExplorer.ReactiveUI.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.Resources>
+        <ItemsPanelTemplate x:Key="ItemsPanel">
+            <WrapPanel />
+        </ItemsPanelTemplate>
+        <DataTemplate x:DataType="vm:ADirectory" x:Key="ADirectoryTemplate">
+            <TextBlock Text="{Binding Name, Mode=OneTime}" />
+        </DataTemplate>
+    </Application.Resources>
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+</Application>

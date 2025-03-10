@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>FileCopyFinder.UI.FuncUI.Mvu</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="PhotoGallery.fs" />
+    <Compile Include="MainView.fs" />
+    <Compile Include="Program.fs" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.3" />
+    <PackageReference Include="Avalonia.FuncUI" Version="1.5.1" />
+    <PackageReference Include="Avalonia.FuncUI.Elmish" Version="1.5.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.3" />
+    <PackageReference Include="MediaDevices" Version="1.10.0" />
+  </ItemGroup>
+</Project>
